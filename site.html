@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DealRanker</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h1>DealRanker</h1>
+
+  <form>
+    <label for="inputFile">Select input CSV file:</label>
+    <input type="file" id="inputFile" accept=".csv">
+
+    <button type="button" id="calculate">Run Algorithm</button>
+    <div id="outputContainer" hidden>
+      <a href="#" id="downloadLink" hidden download="output_file.csv">Download CSV file</a>
+    </div>
+  </form>
+
+  <h2> Deal Evaluation Method</h2>
+  <p class="explanation">
+    This algorithm evaluates deals based on four factors: vouchers sold, sold per day, net revenue, and conversion rate. Each factor is normalized and then weighted according to its importance. The weighted factors are summed to calculate a Deal Score, and the deals are ranked based on their Deal Score in descending order.
+  </p>
+
+  <table class="weights-table">
+    <thead>
+      <tr>
+        <th>Factor</th>
+        <th>Weight</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Vouchers Sold</td>
+        <td>0.25</td>
+      </tr>
+      <tr>
+        <td>Sold per Day</td>
+        <td>0.1</td>
+      </tr>
+      <tr>
+        <td>Net Revenue</td>
+        <td>0.25</td>
+      </tr>
+      <tr>
+        <td>Conversion Rate</td>
+        <td>0.4</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+  <script src="app.js"></script>
+
+  <img src="https://ciudaddelsaber.org/wp-content/uploads/affiliates/0013m0000207FUeAAM.png?time=202006291549" alt="Logo" class="logo">
+
+  <p class="rights"> © 2023 - OfertaSimple. All Rights Reserved.
+    <p />
+
+</body>
+
+</html>
