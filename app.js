@@ -22,14 +22,14 @@ function processCSV(results) {
     "business name": row[2],
     id: +removeCommas(row[0]),
     "vouchers sold": +removeCommas(row[9]),
-    "Sold per day": +removeCommas(row[13]),
+    "sold per day": +removeCommas(row[13]),
     "net revenue": +removeCommas(row[10]),
     "conversion rate": +removeCommas(row[12])
   }));
 
   const columns = [
     "vouchers sold",
-    "Sold per day",
+    "sold per day",
     "net revenue",
     "conversion rate"
   ];
